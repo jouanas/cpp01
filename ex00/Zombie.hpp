@@ -5,8 +5,6 @@
 #include <iostream>
 #include <string.h>
 #include <iomanip>
-#include <stdio.h>
-#include <climits>
 
 class Zombie
 {
