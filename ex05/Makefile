@@ -1,9 +1,9 @@
 CXX = c++
-NAME = Sed_is_for_losers
+NAME = Harl
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp file.cpp
+SRCS = main.cpp Harl.cpp
 OBJS = $(SRCS:.cpp=.o)
-HEADER = file.hpp
+HEADER = Harl.hpp
 all: $(NAME)
 
 $(NAME): $(OBJS) $(HEADER)
