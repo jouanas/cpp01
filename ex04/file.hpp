@@ -8,6 +8,6 @@
 #include <stdlib.h>
 
 void ft_error(std::string string_error);
-void replace_line(std::string &line, std::size_t  position, std::string s1, std::string s2);
+void replace_line(std::string &line, std::string s1, std::string s2);
 
 #endif

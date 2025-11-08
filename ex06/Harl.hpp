@@ -12,7 +12,6 @@ class Harl
          void info( void );
          void warning( void );
          void error( void );
-    typedef  void (Harl::*pointer_member)();
     public:
         Harl();
         void complain( std::string level );

@@ -21,15 +21,34 @@ void Harl::error( void )
 void Harl::complain( std::string level )
 {
     int i = 0;
+    int choice = -1;
     std::string functions[4] = { "DEBUG", "INFO", "WARNING", "ERROR"};
-    pointer_member function[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+   while (i < 4)
+       {
+           if (functions[i] == level)
+               {
+                   choice = i;
+                   break;
+               }
+           i++;
+       }
+       switch (choice)
+       {
+        case 0:
+            debug();
+        case 1:
+            info();
+        case 2:
+            warning();
+        case 3:
+            error();
+            break;
+       default:
+            std::cout<<"[ Probably complaining about insignificant problems ]"<<std::endl;
+            break;
+       }
 
-    while (i < 4)
-    {
-        if (functions[i] == level)
-           (this->*function[i])();
-        i++;
-    }
+
 }
 
 Harl:: Harl()
